@@ -16,4 +16,6 @@ public class PasswordHasher {
             e.printStackTrace();
             return null;
         }
-    }}
+    }
+}
+
