@@ -3,6 +3,7 @@ package Entity;
 public class ChiTietThue {
     private int maCT;
     private int maPhieu;
+    private String tenTB;
     private String maTB;
     private String hinhThucThue; 
     private long giaThue;        
@@ -22,6 +23,14 @@ public class ChiTietThue {
 
     public void setMaPhieu(int maPhieu) {
         this.maPhieu = maPhieu;
+    }
+
+    public String getTenTB() {
+        return tenTB;
+    }
+
+    public void setTenTB(String tenTB) {
+        this.tenTB = tenTB;
     }
 
     public String getMaTB() {
@@ -76,3 +85,4 @@ public class ChiTietThue {
     }
     
 }
+
