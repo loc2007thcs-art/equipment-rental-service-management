@@ -98,8 +98,7 @@ public class DangNhapGUI extends JFrame{
             ManHinhChinhGUI main = new ManHinhChinhGUI(acc); 
             main.setVisible(true);
             this.dispose();
-            
-            this.dispose(); 
+ 
         } else {
             JOptionPane.showMessageDialog(this, "Tài khoản hoặc mật khẩu không chính xác!", "Lỗi", JOptionPane.ERROR_MESSAGE);
         }
@@ -113,3 +112,4 @@ public class DangNhapGUI extends JFrame{
         SwingUtilities.invokeLater(() -> new DangNhapGUI().setVisible(true));
     }
 }
+
