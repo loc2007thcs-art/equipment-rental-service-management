@@ -9,7 +9,6 @@ public class PhieuThueDAO {
     
     public List<PhieuThue> getAll() {
     List<PhieuThue> list = new ArrayList<>();
-    // Join với bảng KhachHang để lấy TenKH thay vì chỉ lấy MaKH
     String sql = "SELECT p.*, k.TenKH FROM PhieuThue p JOIN KhachHang k ON p.MaKH = k.MaKH ORDER BY p.MaPhieu ASC";
     
     try (Connection con = Database.getConnection();
@@ -223,3 +222,4 @@ public class PhieuThueDAO {
     }
     
 }
+
