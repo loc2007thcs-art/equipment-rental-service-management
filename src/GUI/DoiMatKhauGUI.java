@@ -82,7 +82,7 @@ public class DoiMatKhauGUI extends JFrame {
         AccountDAO dao = new AccountDAO();
         // 1. Kiểm tra tài khoản và mật khẩu cũ có đúng không
         if (dao.login(user, oldPass) != null) {
-            // 2. Nếu đúng thì tiến hành cập nhật mật khẩu mới
+        
             if (dao.updatePassword(user, newPass)) {
                 JOptionPane.showMessageDialog(this, "Đổi mật khẩu thành công!");
                 new DangNhapGUI().setVisible(true);
@@ -94,4 +94,5 @@ public class DoiMatKhauGUI extends JFrame {
             JOptionPane.showMessageDialog(this, "Username hoặc mật khẩu cũ sai!");
         }
     }
+
 }
