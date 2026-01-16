@@ -52,10 +52,10 @@ public class KhachHangDAO {
             System.out.println("Lỗi: Số điện thoại phải có 10 chữ số và bắt đầu bằng số 0!");
         return false;
         }
-    String newMaKH = getNextMaKH();
-    String sql = "INSERT INTO KhachHang (MaKH, TenKH, SDT, DiaChi) VALUES (?, ?, ?, ?)";
-    try (Connection con = Database.getConnection();
-         PreparedStatement ps = con.prepareStatement(sql)) {
+        String newMaKH = getNextMaKH();
+        String sql = "INSERT INTO KhachHang (MaKH, TenKH, SDT, DiaChi) VALUES (?, ?, ?, ?)";
+        try (Connection con = Database.getConnection();
+        PreparedStatement ps = con.prepareStatement(sql)) {
         
         ps.setString(1, newMaKH); 
         ps.setString(2, kh.getTenKH());
@@ -103,4 +103,5 @@ public class KhachHangDAO {
         }
         return list;
     }        
+
 }
