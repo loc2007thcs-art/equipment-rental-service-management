@@ -55,7 +55,8 @@ public class AccountDAO {
     String sql = "UPDATE Account SET Password = ? WHERE Username = ?";
     try (Connection con = Database.getConnection();
          PreparedStatement ps = con.prepareStatement(sql)) {
-        ps.setString(1, newPassword);
+        String hashedPassword = PasswordHasher.hashPassword(newPassword);
+        ps.setString(1, hashedPassword);
         ps.setString(2, username);
         return ps.executeUpdate() > 0;  
     } catch (Exception e) {
@@ -64,3 +65,4 @@ public class AccountDAO {
     return false;
     }        
 }
+
