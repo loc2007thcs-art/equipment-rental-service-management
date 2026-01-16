@@ -72,9 +72,9 @@ public class KhachHangDAO {
         String sql = "UPDATE KhachHang SET TenKH = ?, SDT = ?, DiaChi = ? WHERE MaKH = ?";
         try (Connection con = Database.getConnection();
              PreparedStatement ps = con.prepareStatement(sql)) {
-            ps.setString(2, kh.getTenKH());
-            ps.setString(3, kh.getSDT());
-            ps.setString(4, kh.getDiachi());
+            ps.setString(1, kh.getTenKH());
+            ps.setString(2, kh.getSDT());
+            ps.setString(3, kh.getDiachi());
             ps.setString(4, kh.getMaKH());
             return ps.executeUpdate() > 0;
         } catch (Exception e) {
@@ -105,3 +105,4 @@ public class KhachHangDAO {
     }        
 
 }
+
