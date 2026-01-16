@@ -98,7 +98,7 @@ public class PhieuThueDAO {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 ChiTietThue ct = new ChiTietThue();
-                ct.setMaTB(rs.getString("TenTB"));
+                ct.setTenTB(rs.getString("TenTB"));
                 ct.setHinhThucThue(rs.getString("HinhThucThue"));
                 ct.setGiaThue(rs.getLong("GiaThue"));
                 ct.setThoiHan(rs.getInt("ThoiHan")); 
@@ -237,3 +237,4 @@ public class PhieuThueDAO {
         }
     }
 }
+
