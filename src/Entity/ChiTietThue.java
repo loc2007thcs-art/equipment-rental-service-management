@@ -68,16 +68,18 @@ public class ChiTietThue {
     public ChiTietThue() {
     
     }
-    public ChiTietThue(int maCT, int maPhieu, String maTB, String hinhThucThue, long giaThue, int ThoiHan) {
+    public ChiTietThue(int maCT, int maPhieu, String tenTB, String maTB, String hinhThucThue, long giaThue, int ThoiHan) {
         this.maCT = maCT;
         this.maPhieu = maPhieu;
+        this.tenTB = tenTB;
         this.maTB = maTB;
         this.hinhThucThue = hinhThucThue;
         this.giaThue = giaThue;
         this.ThoiHan = ThoiHan;
     }
-    public ChiTietThue(int maPhieu, String maTB, String hinhThucThue, long giaThue, int ThoiHan) {
+    public ChiTietThue(int maPhieu, String tenTB, String maTB, String hinhThucThue, long giaThue, int ThoiHan) {
         this.maPhieu = maPhieu;
+        this.tenTB = tenTB;
         this.maTB = maTB;
         this.hinhThucThue = hinhThucThue;
         this.giaThue = giaThue;
@@ -85,4 +87,5 @@ public class ChiTietThue {
     }
     
 }
+
 
